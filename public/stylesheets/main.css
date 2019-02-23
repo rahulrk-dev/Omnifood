@@ -1,14 +1,116 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
-	color: #444;
-	background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
 }
 
-body {
-	font-family: 'Lato', sans-serif;
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.61))), url("../img/hero.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center;
+  background-size: cover;
+  height: 100vh;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero-text-box h1 {
+  margin: 0 0 0.8em;
+  color: #fff;
+  font-size: 250%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 200px;
+  -webkit-box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+.btn-f:link, .btn-f:visited {
+  background: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-f:hover, .btn-f:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+  color: none;
+}
+
+.btn-g:link, .btn-g:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-g:hover, .btn-g:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+  color: #fff;
+}
+
+.row {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.row .logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 1em;
+}
+
+.row .main-nav {
+  float: right;
+  list-style-type: none;
+  margin-top: 2.5em;
+}
+
+.row .main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.row .main-nav li a:link, .row .main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border 350ms ease;
+  transition: border 350ms ease;
+}
+
+.row .main-nav li a:hover, .row .main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+/*# sourceMappingURL=main.css.map */

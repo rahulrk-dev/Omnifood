@@ -1,0 +1,139 @@
+$colors: (
+	primary: #e67e22,
+	primary45: #cf6d17
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+}
+
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center;
+	background-size: cover;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// text-align: center;
+
+	h1 {
+		margin: 0 0 0.8em;
+		color: #fff;
+		font-size: 250%;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		word-spacing: 4px;
+		text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+	}
+}
+
+
+.btn {
+	
+	&:link,
+	&:visited {
+		display: inline-block;
+		padding: 10px 30px;
+		border-radius: 200px;
+		box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+		transition: all 350ms ease;
+	}
+}
+
+@mixin btn-hover($c) {
+	&:hover,
+	&:active {
+		background-color: color(primary45);
+		border: 1px solid color(primary45);
+		color: $c;
+	}
+}
+
+.btn-f {
+
+	&:link,
+	&:visited {
+		background: color(primary);
+		border: 1px solid color(primary);
+		color: #fff;
+		margin-right: 15px;
+	}
+
+	@include btn-hover(none);
+}
+
+.btn-g {
+
+	&:link,
+	&:visited {
+		border: 1px solid color(primary);
+		color: color(primary);
+	}
+
+	@include btn-hover(#fff);
+}
+
+
+.row {
+	width: 1140px;
+	margin: 0 auto;
+
+	.logo {
+		height: 100px;
+		width: auto;
+		float: left;
+		margin-top: 1em;
+	}
+	
+	.main-nav {
+		float: right;
+		list-style-type: none;
+		margin-top: 2.5em;
+
+		li {
+			display: inline-block;
+			margin-left: 40px;
+
+			a {
+
+				&:link,
+				&:visited {
+					padding: 8px 0;
+					color: #fff;
+					text-transform: uppercase;
+					font-size: 90%;
+					border-bottom: 2px solid transparent;
+					transition: border 350ms ease;
+				}
+
+				&:hover,
+				&:active {
+					border-bottom: 2px solid color(primary);
+				}
+			}
+		}
+	}
+}
