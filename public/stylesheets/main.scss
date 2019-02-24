@@ -36,7 +36,7 @@ html {
 }
 
 header {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center fixed;
 	background-size: cover;
 	height: 100vh;
 }
@@ -144,7 +144,7 @@ a {
 	}
 }
 
-section {
+.section-features {
 	padding: 80px 0;
 
 	h2 {
@@ -169,6 +169,7 @@ section {
 		line-height: 145%;
 		width: 70%;
 		margin-left: 15%;
+		margin-bottom: 30px;
 	}
 
 	.box {
@@ -193,5 +194,44 @@ section {
 		margin-bottom: 15px;
 
 		@include headerH(0);
+	}
+}
+
+.section-meals {
+	padding: 0;
+
+	.meals-showcase {
+		list-style-type: none;
+		width: 100%;
+
+		li {
+			display: block;
+			float: left;
+			width: 25%;
+
+			.meal-photo {
+				width: 100%;
+				margin: 0;
+				overflow: hidden;
+				background: #000;
+
+				img {
+					width: 100%;
+					height: auto;
+					transform: scale(1.15);
+					filter: grayscale(0.75);
+					opacity: 0.65;
+					transition: transform 550ms ease-out,
+								filter 850ms ease-in,
+								opacity 650ms ease-in;
+
+					&:hover {
+						opacity: 1;
+						filter: grayscale(0.25);
+						transform: scale(1.03);
+					}
+				}
+			}
+		}
 	}
 }

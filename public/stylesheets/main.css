@@ -13,8 +13,8 @@ html {
 }
 
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.61))), url("../img/hero.jpg") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.61))), url("../img/hero.jpg") center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -115,11 +115,11 @@ a {
   border-bottom: 2px solid #e67e22;
 }
 
-section {
+.section-features {
   padding: 80px 0;
 }
 
-section h2 {
+.section-features h2 {
   font-size: 180%;
   word-spacing: 2px;
   text-align: center;
@@ -129,7 +129,7 @@ section h2 {
   letter-spacing: 1px;
 }
 
-section h2::after {
+.section-features h2::after {
   content: '';
   display: block;
   margin: 30px auto;
@@ -138,34 +138,79 @@ section h2::after {
   background: #e67e22;
 }
 
-section .long-copy {
+.section-features .long-copy {
   line-height: 145%;
   width: 70%;
   margin-left: 15%;
+  margin-bottom: 30px;
 }
 
-section .box {
+.section-features .box {
   padding: 1%;
   text-align: center;
 }
 
-section .box p {
+.section-features .box p {
   font-size: 90%;
   line-height: 145%;
 }
 
-section .box .icon-big {
+.section-features .box .icon-big {
   display: block;
   font-size: 350%;
   color: #e67e22;
   margin-bottom: 10px;
 }
 
-section h3 {
+.section-features h3 {
   font-size: 110%;
   margin-bottom: 15px;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0;
+}
+
+.section-meals {
+  padding: 0;
+}
+
+.section-meals .meals-showcase {
+  list-style-type: none;
+  width: 100%;
+}
+
+.section-meals .meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.section-meals .meals-showcase li .meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.section-meals .meals-showcase li .meal-photo img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: grayscale(0.75);
+          filter: grayscale(0.75);
+  opacity: 0.65;
+  -webkit-transition: opacity 650ms ease-in, -webkit-transform 550ms ease-out, -webkit-filter 850ms ease-in;
+  transition: opacity 650ms ease-in, -webkit-transform 550ms ease-out, -webkit-filter 850ms ease-in;
+  transition: transform 550ms ease-out, filter 850ms ease-in, opacity 650ms ease-in;
+  transition: transform 550ms ease-out, filter 850ms ease-in, opacity 650ms ease-in, -webkit-transform 550ms ease-out, -webkit-filter 850ms ease-in;
+}
+
+.section-meals .meals-showcase li .meal-photo img:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0.25);
+          filter: grayscale(0.25);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 /*# sourceMappingURL=main.css.map */
