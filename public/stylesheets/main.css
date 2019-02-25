@@ -24,16 +24,7 @@ a {
   color: #000;
 }
 
-.hero-text-box {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.hero-text-box h1 {
+h1 {
   margin: 0 0 0.8em;
   color: #fff;
   font-size: 250%;
@@ -42,6 +33,50 @@ a {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  margin: 30px auto;
+  height: 2px;
+  width: 100px;
+  background: #e67e22;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .btn:link, .btn:visited {
@@ -113,29 +148,6 @@ a {
 
 .row .main-nav li a:hover, .row .main-nav li a:active {
   border-bottom: 2px solid #e67e22;
-}
-
-.section-features {
-  padding: 80px 0;
-}
-
-.section-features h2 {
-  font-size: 180%;
-  word-spacing: 2px;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.section-features h2::after {
-  content: '';
-  display: block;
-  margin: 30px auto;
-  height: 2px;
-  width: 100px;
-  background: #e67e22;
 }
 
 .section-features .long-copy {
@@ -212,5 +224,52 @@ a {
           filter: grayscale(0.25);
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+.section-steps {
+  background: #f4f4f4;
+}
+
+.section-steps .steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.section-steps .steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.section-steps .steps-box .app-screen {
+  width: 40%;
+}
+
+.section-steps .steps-box .works-step {
+  margin-bottom: 50px;
+}
+
+.section-steps .steps-box .works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.section-steps .steps-box .works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 6px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.section-steps .steps-box .btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */

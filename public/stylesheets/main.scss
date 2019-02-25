@@ -1,5 +1,7 @@
-$colors: (primary: #e67e22,
-primary45: #cf6d17);
+$colors: (
+	primary: #e67e22,
+	primary45: #cf6d17
+);
 
 @function color($color-name) {
 	@return map-get($colors, $color-name);
@@ -47,6 +49,48 @@ a {
 }
 
 
+h1 {
+	margin: 0 0 0.8em;
+	color: #fff;
+	font-size: 250%;
+	word-spacing: 4px;
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+	@include headerH(1px);
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	@include headerH(1px);
+
+	&::after {
+		content: '';
+		display: block;
+		margin: 30px auto;
+		height: 2px;
+		width: 100px;
+		background: color(primary);
+	}
+}
+
+section {
+	padding: 80px 0;
+}
+
+.clearfix {
+	zoom: 1;
+
+	&::after {
+		content: '.';
+		clear: both;
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
 .hero-text-box {
 	position: absolute;
 	width: 1140px;
@@ -54,15 +98,6 @@ a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	// text-align: center;
-
-	h1 {
-		margin: 0 0 0.8em;
-		color: #fff;
-		font-size: 250%;
-		word-spacing: 4px;
-		text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-		@include headerH(1px);
-	}
 }
 
 
@@ -145,25 +180,6 @@ a {
 }
 
 .section-features {
-	padding: 80px 0;
-
-	h2 {
-		font-size: 180%;
-		word-spacing: 2px;
-		text-align: center;
-		margin-bottom: 30px;
-		@include headerH(1px);
-
-		&::after {
-			content: '';
-			display: block;
-			margin: 30px auto;
-			height: 2px;
-			width: 100px;
-			background: color(primary);
-
-		}
-	}
 
 	.long-copy {
 		line-height: 145%;
@@ -231,6 +247,59 @@ a {
 						transform: scale(1.03);
 					}
 				}
+			}
+		}
+	}
+}
+
+.section-steps {
+	background: #f4f4f4;
+
+	.steps-box {
+
+		&:first-child {
+			text-align: right;
+			padding-right: 3%;
+			margin-top: 30px;
+		}
+
+		&:last-child {
+			padding-left: 3%;
+			margin-top: 70px;
+		}
+
+		.app-screen {
+			width: 40%;
+		}
+
+		.works-step {
+			margin-bottom: 50px;
+
+			&:last-of-type {
+				margin-bottom: 80px;
+			}
+
+			div {
+				color: color(primary);
+				border: 2px solid color(primary);
+				display: inline-block;
+				border-radius: 50%;
+				height: 55px;
+				width: 55px;
+				text-align: center;
+				padding: 6px;
+				float: left;
+				font-size: 150%;
+				margin-right: 25px;
+			}
+		}
+
+		.btn-app {
+
+			img {
+				height: 50px;
+				width: auto;
+				margin-right: 10px;
 			}
 		}
 	}
