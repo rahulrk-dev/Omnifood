@@ -19,9 +19,18 @@ header {
   height: 100vh;
 }
 
-a {
+a:link, a:visited {
   text-decoration: none;
-  color: #000;
+  color: #e67e22;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  -webkit-transition: color 350ms ease, border-bottom 250ms ease-in;
+  transition: color 350ms ease, border-bottom 250ms ease-in;
+}
+
+a:hover, a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
 }
 
 h1 {
@@ -29,7 +38,7 @@ h1 {
   color: #fff;
   font-size: 250%;
   word-spacing: 4px;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -52,6 +61,14 @@ h2::after {
   height: 2px;
   width: 100px;
   background: #e67e22;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 section {
@@ -174,14 +191,6 @@ section {
   margin-bottom: 10px;
 }
 
-.section-features h3 {
-  font-size: 110%;
-  margin-bottom: 15px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0;
-}
-
 .section-meals {
   padding: 0;
 }
@@ -267,9 +276,36 @@ section {
   margin-right: 25px;
 }
 
+.section-steps .steps-box .btn-app:link, .section-steps .steps-box .btn-app:visited {
+  border: 0;
+}
+
 .section-steps .steps-box .btn-app img {
   height: 50px;
   width: auto;
   margin-right: 10px;
+}
+
+.section-cities .box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.section-cities .box .city-feature {
+  margin-bottom: 5px;
+}
+
+.section-cities .box .city-feature .icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
 }
 /*# sourceMappingURL=main.css.map */
