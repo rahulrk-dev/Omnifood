@@ -1,3 +1,6 @@
+/*-----------------------------------------------------
+--------------------  Public  -------------------------
+-----------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +13,6 @@ html {
   font-size: 20px;
   color: #333;
   text-rendering: optimizeLegibility;
-}
-
-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.61))), url("../img/hero.jpg") center fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center fixed;
-  background-size: cover;
-  height: 100vh;
 }
 
 a:link, a:visited {
@@ -75,6 +71,12 @@ section {
   padding: 80px 0;
 }
 
+/*-------------------------------------------------------*/
+.row {
+  width: 1140px;
+  margin: 0 auto;
+}
+
 .clearfix {
   zoom: 1;
 }
@@ -87,21 +89,29 @@ section {
   visibility: hidden;
 }
 
-.hero-text-box {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.icon-big {
+  display: block;
+  font-size: 350%;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
 }
 
 .btn:link, .btn:visited {
   display: inline-block;
   padding: 10px 30px;
   border-radius: 200px;
-  -webkit-box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
 }
@@ -130,30 +140,35 @@ section {
   color: #fff;
 }
 
-.row {
-  width: 1140px;
-  margin: 0 auto;
+/*-----------------------------------------------------------
+------------------------- Private ---------------------------
+-------------------------------------------------------------*/
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.61))), url("../img/hero.jpg") center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.61)), url("../img/hero.jpg") center fixed;
+  background-size: cover;
+  height: 100vh;
 }
 
-.row .logo {
+header .logo {
   height: 100px;
   width: auto;
   float: left;
   margin-top: 1em;
 }
 
-.row .main-nav {
+header .main-nav {
   float: right;
   list-style-type: none;
   margin-top: 2.5em;
 }
 
-.row .main-nav li {
+header .main-nav li {
   display: inline-block;
   margin-left: 40px;
 }
 
-.row .main-nav li a:link, .row .main-nav li a:visited {
+header .main-nav li a:link, header .main-nav li a:visited {
   padding: 8px 0;
   color: #fff;
   text-transform: uppercase;
@@ -163,8 +178,17 @@ section {
   transition: border 350ms ease;
 }
 
-.row .main-nav li a:hover, .row .main-nav li a:active {
+header .main-nav li a:hover, header .main-nav li a:active {
   border-bottom: 2px solid #e67e22;
+}
+
+header .hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .section-features .long-copy {
@@ -182,13 +206,6 @@ section {
 .section-features .box p {
   font-size: 90%;
   line-height: 145%;
-}
-
-.section-features .box .icon-big {
-  display: block;
-  font-size: 350%;
-  color: #e67e22;
-  margin-bottom: 10px;
 }
 
 .section-meals {
@@ -297,18 +314,6 @@ section {
   margin-bottom: 5px;
 }
 
-.section-cities .box .city-feature .icon-small {
-  display: inline-block;
-  width: 30px;
-  text-align: center;
-  color: #e67e22;
-  font-size: 120%;
-  margin-right: 10px;
-  line-height: 120%;
-  vertical-align: middle;
-  margin-top: -5px;
-}
-
 .section-testimonials {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7))), url("../img/back-customers.jpg") fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../img/back-customers.jpg") fixed;
@@ -343,5 +348,58 @@ section {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.section-plans {
+  background: #f4f4f4;
+}
+
+.section-plans .plan-box {
+  background: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.section-plans .plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.section-plans .plan-box div:first-child {
+  background: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.section-plans .plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+.section-plans .plan-box div .plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+
+.section-plans .plan-box div .plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.section-plans .plan-box div .plan-price-meal {
+  font-size: 80%;
+}
+
+.section-plans .plan-box ul {
+  list-style-type: none;
+}
+
+.section-plans .plan-box ul li {
+  padding: 5px 0;
 }
 /*# sourceMappingURL=main.css.map */
