@@ -308,4 +308,40 @@ section {
   vertical-align: middle;
   margin-top: -5px;
 }
+
+.section-testimonials {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7))), url("../img/back-customers.jpg") fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../img/back-customers.jpg") fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.section-testimonials blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+}
+
+.section-testimonials blockquote::before {
+  content: '\201C';
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.section-testimonials blockquote cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+.section-testimonials blockquote cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 /*# sourceMappingURL=main.css.map */
