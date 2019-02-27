@@ -414,6 +414,10 @@ header .hero-text-box {
   padding: 5px 0;
 }
 
+.section-form {
+  overflow: hidden;
+}
+
 .section-form .contact-form {
   width: 60%;
   margin: 0 auto;
@@ -423,7 +427,7 @@ header .hero-text-box {
 .section-form .contact-form input[type=email],
 .section-form .contact-form select,
 .section-form .contact-form textarea {
-  width: 50%;
+  width: 60%;
   padding: 7px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -439,5 +443,75 @@ header .hero-text-box {
 
 .section-form .contact-form *:focus {
   outline: none;
+}
+
+footer {
+  background: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer ul li a:link, footer ul li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 350ms ease;
+  transition: color 350ms ease;
+}
+
+footer .footer-nav {
+  float: left;
+}
+
+footer .footer-nav li a:hover, footer .footer-nav li a:active {
+  color: #ddd;
+}
+
+footer .social-links {
+  float: right;
+}
+
+footer .social-links li a:link, footer .social-links li a:visited {
+  font-size: 160%;
+}
+
+footer .social-links li a i {
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+footer .social-links li a .ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+footer .social-links li a .ion-social-twitter:hover {
+  color: #00aced;
+}
+
+footer .social-links li a .ion-social-googleplus:hover {
+  color: #dd4b39;
+}
+
+footer .social-links li a .ion-social-instagram:hover {
+  color: #e4405f;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=main.css.map */
