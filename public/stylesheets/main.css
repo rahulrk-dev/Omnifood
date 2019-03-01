@@ -157,6 +157,34 @@ input[type=submit]:active {
   color: #fff;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.986);
+  -webkit-box-shadow: 0 2px 2px #efefef;
+          box-shadow: 0 2px 2px #efefef;
+  z-index: 5;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .logo-black {
+  display: block;
+}
+
+.sticky .main-nav {
+  margin-top: 18px;
+}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+  padding: 16px 0;
+  color: #555;
+}
+
 /*-----------------------------------------------------------
 ------------------------- Private ---------------------------
 -------------------------------------------------------------*/
@@ -167,11 +195,31 @@ header {
   height: 100vh;
 }
 
+header .mobile-nav-icon {
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+header .mobile-nav-icon i {
+  font-size: 200%;
+  color: #fff;
+}
+
 header .logo {
   height: 100px;
   width: auto;
   float: left;
   margin-top: 1em;
+}
+
+header .logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
 }
 
 header .main-nav {
@@ -526,5 +574,24 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 30px;
+}
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+  opacity: 1;
+}
+
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 /*# sourceMappingURL=main.css.map */
